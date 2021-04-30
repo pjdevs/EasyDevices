@@ -20,7 +20,7 @@ class Joystick
         Joystick();
         
         // Attach the Joystick its pins
-        void attach(uint8_t xPin, uint8_t yPin, uint8_t pressBtnPin, uint8_t pressBtnMode = OUTPUT);
+        void attach(uint8_t xPin, uint8_t yPin, uint8_t pressBtnPin, uint8_t pressBtnMode = INPUT_PULLUP);
         // Detach the Joystick from its pins
         void detach();
         // Update the Joystick state (call it once per loop BEFORE access to members)
