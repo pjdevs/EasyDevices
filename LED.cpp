@@ -4,7 +4,7 @@ LED::LED()
     : pin(-1), state(LOW)
 {}
 
-void LED::attach(int pinNb, int mode)
+void LED::attach(uint8_t pinNb, uint8_t mode)
 {
     pin = pinNb;
 

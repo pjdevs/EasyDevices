@@ -4,7 +4,7 @@ PushButton::PushButton()
     : pin(-1), currentState(HIGH), previousState(HIGH) 
 {}
 
-void PushButton::attach(int pinNb, int mode)
+void PushButton::attach(uint8_t pinNb, uint8_t mode)
 {
     pin = pinNb;
 

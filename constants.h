@@ -1,0 +1,8 @@
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
+#define MAX_ANALOG_VALUE 1023
+#define MIN_ANALOG_VALUE 0
+#define HALF_ANALOG_VALUE 511
+
+#endif

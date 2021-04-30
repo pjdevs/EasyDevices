@@ -14,7 +14,7 @@ class LED
         LED();
         
         // Attach the LED to a digital pin
-        void attach(int pinNb, int mode = OUTPUT);
+        void attach(uint8_t pinNb, uint8_t mode = OUTPUT);
         // Detach the LED from its pin
         void detach();
         // Update the LED state (call it once per loop AFTER on, off, etc.)

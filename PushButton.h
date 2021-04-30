@@ -15,7 +15,7 @@ class PushButton
         PushButton();
         
         // Attach the button to a digital pin
-        void attach(int pinNb, int mode = INPUT_PULLUP);
+        void attach(uint8_t pinNb, uint8_t mode = INPUT_PULLUP);
         // Detach the button from its pin
         void detach();
         // Update the button state (call it once per loop BEFORE is....)
