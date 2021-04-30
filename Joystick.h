@@ -1,5 +1,5 @@
-#ifndef LED_H
-#define LED_H
+#ifndef JOYSTICK_H
+#define JOYSTICK_H
 
 #include "Arduino.h"
 #include "PushButton.h"
