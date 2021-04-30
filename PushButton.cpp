@@ -37,5 +37,5 @@ bool PushButton::isPressed(bool switchHighLow) const
 
 bool PushButton::isReleased(bool switchHighLow) const
 {
-    return currentState == (switchHighLow ? LOW : HIGH) && previousState == (switchHighLow ? HIGH : LOW); 
+    return currentState == (switchHighLow ? HIGH : LOW) && previousState == (switchHighLow ? LOW : HIGH); 
 }
