@@ -30,12 +30,12 @@ bool PushButton::isAttached() const
     return pin != -1;
 }
 
-bool PushButton::isPressed() const
+bool PushButton::isPressed(bool switchHighLow) const
 {
-    return currentState == HIGH;
+    return currentState == (switchHighLow ? LOW : HIGH);
 }
 
-bool PushButton::isReleased() const
+bool PushButton::isReleased(bool switchHighLow) const
 {
-    return currentState == HIGH && previousState == LOW; 
+    return currentState == (switchHighLow ? LOW : HIGH) && previousState == (switchHighLow ? HIGH : LOW); 
 }

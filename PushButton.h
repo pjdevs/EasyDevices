@@ -24,9 +24,9 @@ class PushButton
         // Predicate if the button is attached to a pin 
         bool isAttached() const;
         // Predicate if the button is currently pressed
-        bool isPressed() const;
+        bool isPressed(bool switchHighLow = false) const;
         // Predicate if the button has just been released
-        bool isReleased() const;
+        bool isReleased(bool switchHighLow = false) const;
 };
 
 #endif

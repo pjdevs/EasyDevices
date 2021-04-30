@@ -43,12 +43,12 @@ const Vector2& Joystick::getXY() const
 
 bool Joystick::isPressed() const
 {
-    return pressBtn.isPressed();
+    return pressBtn.isPressed(true);
 }
 
 bool Joystick::isReleased() const
 {
-    return pressBtn.isReleased();
+    return pressBtn.isReleased(true);
 }
 
 bool Joystick::isAttached() const
