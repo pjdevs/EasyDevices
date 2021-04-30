@@ -4,7 +4,7 @@ Joystick::Joystick()
     : pinX(-1), pinY(-1), pressBtn()
 {}
 
-void Joystick::attach(uint8_t xPin, uint8_t yPin, uint8_t pressBtnPin, int pressBtnMode = INPUT_PULLUP)
+void Joystick::attach(uint8_t xPin, uint8_t yPin, uint8_t pressBtnPin, uint8_t pressBtnMode)
 {
     pinX = xPin;
     pinY = yPin;
