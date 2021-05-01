@@ -1,7 +1,7 @@
 #include "Joystick.h"
 
 Joystick::Joystick()
-    : pinX(-1), pinY(-1), pressBtn()
+    : pinX(-1), pinY(-1), joyXYRaw(), joyXY(), pressBtn()
 {}
 
 void Joystick::attach(uint8_t xPin, uint8_t yPin, uint8_t pressBtnPin, uint8_t pressBtnMode)
@@ -32,8 +32,16 @@ void Joystick::read()
 {
     pressBtn.read();
 
-    joyXY.x = joyRawToPhys(analogRead(pinX));
-    joyXY.y = joyRawToPhys(analogRead(pinY));    
+    joyXYRaw.x = analogRead(pinX);
+    joyXYRaw.y = analogRead(pinY);    
+
+    joyXY.x = joyRawToPhys(joyXYRaw.x);
+    joyXY.y = joyRawToPhys(joyXYRaw.y);
+}
+
+const Vector2& Joystick::getXYRaw() const
+{
+    return joyXYRaw;
 }
 
 const Vector2& Joystick::getXY() const

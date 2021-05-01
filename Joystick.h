@@ -12,6 +12,7 @@ class Joystick
         int pinX;
         int pinY;
         
+        Vector2 joyXYRaw;
         Vector2 joyXY;
         PushButton pressBtn;
 
@@ -26,6 +27,8 @@ class Joystick
         // Update the Joystick state (call it once per loop BEFORE access to members)
         void read();
 
+        // Returns the Vector2 which represents the raw values of XY axis of the joystick
+        const Vector2& getXYRaw() const;
         // Returns the Vector2 which represents the XY axis of the joystick (between -1.0 and 1.0)
         const Vector2& getXY() const;
         // Check wether the Joystick is pressed or not

@@ -10,6 +10,10 @@ class Vector2 : public Printable
         double y;
 
     public:
+        Vector2();
+        Vector2(double x, double y);
+
+    public:
         virtual size_t printTo(Print& p) const;
 };
 
